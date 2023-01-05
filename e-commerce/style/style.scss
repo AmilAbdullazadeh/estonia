@@ -1,0 +1,154 @@
+@use "reset";
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.item-1 {
+  grid-area: header;
+}
+
+.item-2 {
+  grid-area: main;
+}
+
+.item-3 {
+  grid-area: sidebar;
+}
+
+.item-4 {
+  grid-area: footer;
+}
+
+#main {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "main . sidebar"
+    "footer footer footer";
+    // grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 50px;
+    cursor: pointer;
+    .product {
+      // width: 350px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      &__image {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      &__icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+      }
+
+      &__name {
+        opacity: 0.7;
+        letter-spacing: 1px;
+      }
+
+      &__price {
+        font-weight: 700;
+
+        &::before {
+          content: "$ ";
+        }
+      }
+
+      .top {
+        width: 100%;
+        position: relative;
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+#footer {
+  //   height: 250px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  padding: 30px 50px;
+
+  .navigation,
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 70px;
+    row-gap: 20px;
+    &__list {
+      letter-spacing: 1px;
+
+      &--title {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      &--item {
+        margin-bottom: 8px;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .form {
+    width: 350px;
+    flex-direction: column;
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        color: #fff;
+        outline: none;
+      }
+
+      input[type="email"] {
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #d3d3d375;
+        font-size: 17px;
+        padding-bottom: 8px;
+        letter-spacing: 1px;
+      }
+
+      input[type="submit"] {
+        margin-top: 30px;
+        height: 50px;
+        background-color: #ff4600;
+        border: none;
+        border-radius: 8px;
+        font-size: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+}
