@@ -190,6 +190,14 @@ body {
   padding: 30px 20px;
   flex-wrap: wrap;
   cursor: pointer;
+  -webkit-animation-name: transformProducts;
+          animation-name: transformProducts;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 @media only screen and (max-width: 991px) {
   #main .products {
@@ -200,6 +208,13 @@ body {
   #main .products {
     padding: 20px 0;
   }
+}
+#main .products__title {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 1.2px;
+  color: #ea2626;
 }
 #main .products .product {
   width: 350px;
@@ -324,4 +339,43 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+@-webkit-keyframes transformProducts {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes transformProducts {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */

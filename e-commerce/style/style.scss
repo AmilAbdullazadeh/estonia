@@ -139,6 +139,12 @@ body {
     padding: 30px 20px;
     flex-wrap: wrap;
     cursor: pointer;
+    // animation: rotate-center 3s linear 1s both;
+    animation-name: transformProducts;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    // animation: transformProducts 3s  1s 1;
 
     @include tablet {
       width: 93%;
@@ -146,6 +152,14 @@ body {
 
     @include mobile {
       padding: 20px 0;
+    }
+
+    &__title {
+      margin-top: 1em;
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: 1.2px;
+      color: #ea2626;
     }
 
     .product {
@@ -281,5 +295,32 @@ body {
         cursor: pointer;
       }
     }
+  }
+}
+
+// animations
+@keyframes transformProducts {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
