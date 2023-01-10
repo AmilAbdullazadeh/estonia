@@ -26,10 +26,26 @@ body {
 
 // header start
 
-
 #header {
   height: 70px;
   overflow: hidden;
+
+  @include mobile {
+    height: 120px;
+  }
+
+  .desktop__header {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .mobile__header {
+    display: none;
+    @include mobile {
+      @include flexbox(column);
+    }
+  }
 
   .header {
     width: 100%;
@@ -42,7 +58,10 @@ body {
     background-color: #fff;
 
     @include mobile {
-      display: none;
+      row-gap: 15px;
+      height: 140px;
+      padding: 10px 20px;
+      justify-content: space-between;
     }
 
     &__logo {
@@ -65,6 +84,11 @@ body {
     form {
       width: 500px;
       position: relative;
+
+      @include mobile {
+        width: 100%;
+      }
+
       input[type="search"] {
         width: 100%;
         background-color: #d3d3d352;
