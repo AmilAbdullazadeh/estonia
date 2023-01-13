@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
     <!-- GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,11 +95,61 @@
     </header>
 
     <!-- main start -->
-    <main id="main">
-      <h3 class="products__title animate__animated animate__fadeInLeftBig">Top products</h3>
+    <main id="main" class="container">
+      <h3 class="mb-4 products__title animate__animated animate__fadeInLeftBig">
+        Top products
+      </h3>
 
-      <section class="products">
-        <div class="product item-1">
+      <section class="row">
+        <div class="card col-12 col-md-4 mb-4 border-0">
+          <img
+            src="./assets/products/product_1.jpeg"
+            class="card-img-top img-fluid"
+            alt="product image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card col-12 col-md-4 mb-4 border-0">
+          <img
+            src="./assets/products/product_1.jpeg"
+            class="card-img-top img-fluid"
+            alt="product image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card col-12 col-md-4 mb-4 border-0">
+          <img
+            src="./assets/products/product_1.jpeg"
+            class="card-img-top img-fluid"
+            alt="product image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-warning mt-2 text-white">Go somewhere</a>
+          </div>
+        </div>
+
+        <!-- <div class="product item-1">
           <div class="top">
             <img
               class="product__image"
@@ -252,7 +307,7 @@
             <span class="product__name">Check Off Shoulder</span>
             <b class="product__price">559</b>
           </div>
-        </div>
+        </div> -->
       </section>
     </main>
 
@@ -297,5 +352,8 @@
         </form>
       </div>
     </footer>
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js
+"></script>
   </body>
 </html>
